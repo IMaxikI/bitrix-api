@@ -7,6 +7,10 @@ include_once 'Validator.php';
 
 class Controller
 {
+    private const BITRIX_API = 'https://b24-jij6by.bitrix24.by/rest/1/q4hbokaisced2avh/';
+
+    private const BITRIX_METHOD_CREATE_LEAD = 'crm.lead.add';
+
     /**
      * @var DataBase
      */
@@ -40,7 +44,7 @@ class Controller
 
         $curlBitrix = curl_init();
         curl_setopt_array($curlBitrix, array(
-            CURLOPT_URL => 'https://b24-jij6by.bitrix24.by/rest/1/q4hbokaisced2avh/crm.lead.add/',
+            CURLOPT_URL => self::BITRIX_API . self::BITRIX_METHOD_CREATE_LEAD,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => http_build_query($data)
