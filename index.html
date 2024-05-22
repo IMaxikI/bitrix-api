@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="content-wrapper">
+    <h1 class="title">Количество заявок: <span id="countContacts">0</span></h1>
+
+</div>
+<div class="content-wrapper">
+    <h1 class="title">Cвяжитесь с нами:</h1>
+    <form class="form">
+        <div class="form-elem">
+            <label for="name">Имя:</label>
+            <input class="form-input" type="text" id="name"
+                   minlength="2" maxlength="50" required
+                   placeholder="Введите ваше имя...">
+            <span class="name error"></span>
+        </div>
+        <div class="form-elem">
+            <label for="second_name">Фамилия:</label>
+            <input class="form-input" type="text" id="second_name"
+                   minlength="2" maxlength="50" required
+                   placeholder="Введите вашу фамилию...">
+            <span class="second_name error"></span>
+        </div>
+        <div class="form-elem">
+            <label for="last_name">Отчество:</label>
+            <input class="form-input" type="text" id="last_name"
+                   minlength="2" maxlength="50" required
+                   placeholder="Введите ваше отчество...">
+            <span class="last_name error"></span>
+        </div>
+        <div class="form-elem">
+            <label for="phone">Телефон:</label>
+            <input type="tel" class="form-input" id="phone"
+                   required placeholder="Введите ваш телефон...">
+            <span class="phone error"></span>
+        </div>
+        <div class="form-elem">
+            <label for="birthday">Возраст:</label>
+            <input type="date" class="form-input" id="birthday" required>
+            <span class="birthday error"></span>
+        </div>
+        <div class="form-elem">
+            <button class="btn-form" id="submit">Отправить</button>
+        </div>
+    </form>
+    <p id="success"></p>
+</div>
+
+<div id="overlay">
+    <div class="cv-spinner">
+        <span class="spinner"></span>
+    </div>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>
